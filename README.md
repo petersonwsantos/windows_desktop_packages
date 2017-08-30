@@ -69,7 +69,7 @@ https://chocolatey.org/packages
 Dependencies
 ------------
 
-Windows 7 ou upper
+Windows 7 or higher
 
 Example Playbook
 ----------------
