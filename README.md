@@ -20,7 +20,7 @@ Test your Ansible configuration with winrm.
 Role Variables
 --------------
 
-The variables for this role should to set in defaults/main.yml, vars/main.yml or /etc/ansible/groupvars/.
+The Variables for this role must be defined in 'default/main.yml' 'vars/main.yml' or '/etc/ansible/groupvars/'.
 
 **windows_desktop_packages_version** : For instalation packages on specific version.
 Ex: 
