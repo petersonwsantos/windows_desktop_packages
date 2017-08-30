@@ -7,11 +7,9 @@ This ansible role is responsible for installing programs on the network's deskto
 
 Requirements
 ------------
-Ansible configurado com winrm.  
+Test your Ansible configuration with winrm.  
 
-Test:
-
-**[root@ansible ansible]# ansible windows -m win_ping **
+**[root@ansible ansible]#** ansible windows -m win_ping
 ```
 192.168.0.116 | SUCCESS => {
  "changed": false,
@@ -65,7 +63,7 @@ Chocolatey
 
 https://chocolatey.org/packages
 
-<a href="https://feeds.feedburner.com/chocolatey" title="Subscribe to package updates" rel="alternate" type="application/rss+xml"><img src="https://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" style="border:0" />&nbsp;<span> Subscribe Chocolatey to packages version updates</span></a>
+<a href="https://feeds.feedburner.com/chocolatey" title="Subscribe to package updates" rel="alternate" type="application/rss+xml"><img src="https://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" style="border:0" />&nbsp;<span> Subscribe Chocolatey to updates</span></a>
 
 
 Dependencies
