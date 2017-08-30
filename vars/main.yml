@@ -1,0 +1,34 @@
+---
+# vars file for windows-desktop-packages
+windows_desktop_packages_version:
+  - notepadplusplus:
+    name: notepadplusplus
+    state: present
+    version: 7.4.2
+    force: True
+  - googlechrome:
+    name: googlechrome
+    state: present
+    version: 60.0.3112.113
+    force: false
+  #- OpenOffice:
+    #name: openoffice
+    #state: absent
+    #version: 4.1.2
+    #force: True
+windows_desktop_packages_latest:
+  - chocolatey
+  - firefox
+  - jre8
+  - conemu
+  - 7zip.install
+  - openoffice
+  - cdburnerxp
+  - adobereader
+  - ccleaner
+  - dotnet4.0
+  - flashplayerplugin
+  - vlc
+  - pdfcreator
+  - wget
+

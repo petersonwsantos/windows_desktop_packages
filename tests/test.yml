@@ -1,0 +1,4 @@
+---
+- hosts: windows
+  roles:
+    - windows_desktop_packages

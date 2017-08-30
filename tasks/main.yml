@@ -1,0 +1,8 @@
+---
+# tasks file for windows-desktop-packages
+- name: Install packages - Control version
+  win_chocolatey: name={{ item.name }} force={{ item.force }} version={{ item.version }}
+  with_items: "{{ windows_desktop_packages_version }}"
+- name: Install packages - Latest version
+  win_chocolatey: name={{item}} state=latest
+  with_items: "{{ windows_desktop_packages_latest }}"
