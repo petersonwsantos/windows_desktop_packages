@@ -10,11 +10,13 @@ Requirements
 Ansible configurado com winrm.  
 Test:
 [root@ansible ansible]# ansible windows -m win_ping
-    192.168.0.116 | SUCCESS => {
-        "changed": false,
-        "ping": "pong"
-    }
-
+````
+192.168.0.116 | SUCCESS => {
+ "changed": false,
+ "ping": "pong"
+}
+```
+    
 Role Variables
 --------------
 
@@ -22,6 +24,7 @@ The variables for this role should to set in defaults/main.yml, vars/main.yml or
 
 **windows_desktop_packages_version** : For instalation packages on specific version.
 Ex: 
+```
 windows_desktop_packages_version:
   - notepadplusplus:
     name: notepadplusplus
@@ -33,9 +36,11 @@ windows_desktop_packages_version:
     state: present
     version: 60.0.3112.113
     force: false
+```
 
 **windows_desktop_packages_latest**: For instalation packages on latest version
 Ex:
+```
 windows_desktop_packages_latest:
   - chocolatey
   - firefox
@@ -51,12 +56,12 @@ windows_desktop_packages_latest:
   - vlc
   - pdfcreator
   - wget
+```
 
 Chocolatey
 https://chocolatey.org/packages
 
-For information Chocolatey
-<a href="https://feeds.feedburner.com/chocolatey" title="Subscribe to package updates" rel="alternate" type="application/rss+xml"><img src="https://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" style="border:0" />&nbsp;<span>Subscribe to updates</span></a>
+<a href="https://feeds.feedburner.com/chocolatey" title="Subscribe to package updates" rel="alternate" type="application/rss+xml"><img src="https://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" style="border:0" />&nbsp;<span> Subscribe Chocolatey to packages version updates</span></a>
 
 
 Dependencies
@@ -68,42 +73,44 @@ Example Playbook
 ----------------
 
 [root@ansible ansible]# vi site.yml
-
+```
     - name: apply common configuration to all nodes
       hosts: windows
 
       roles:
         - windows-desktop-packages
-
+```
 [root@ansible ansible]# ansible-galaxy install petersonwsantos.windows_desktop_packages
 
 [root@ansible ansible]# tree /etc/ansible
+```
     /etc/ansible
-    ├── enthal_rsa
-    ├── enthal_rsa.pub
-    ├── group_vars
-    │   ├── all.yml
-    │   └── windows.yml
-    ├── hosts
-    ├── roles
-    │   ├── petersonwsantos.windows_desktop_packages
-    │   │   ├── defaults
-    │   │   │   └── main.yml
-    │   │   ├── handlers
-    │   │   │   └── main.yml
-    │   │   ├── meta
-    │   │   │   └── main.yml
-    │   │   ├── README.md
-    │   │   ├── tasks
-    │   │   │   └── main.yml
-    │   │   ├── tests
-    │   │   │   ├── inventory
-    │   │   │   └── test.yml
-    │   │   ├── Vagrantfile
-    │   │   └── vars
-    │   │       └── main.yml
-    ├── site.retry
-    └── site.yml
+        ├── enthal_rsa
+        ├── enthal_rsa.pub
+        ├── group_vars
+        │   ├── all.yml
+        │   └── windows.yml
+        ├── hosts
+        ├── roles
+        │   ├── petersonwsantos.windows_desktop_packages
+        │   │   ├── defaults
+        │   │   │   └── main.yml
+        │   │   ├── handlers
+        │   │   │   └── main.yml
+        │   │   ├── meta
+        │   │   │   └── main.yml
+        │   │   ├── README.md
+        │   │   ├── tasks
+        │   │   │   └── main.yml
+        │   │   ├── tests
+        │   │   │   ├── inventory
+        │   │   │   └── test.yml
+        │   │   ├── Vagrantfile
+        │   │   └── vars
+        │   │       └── main.yml
+        ├── site.retry
+        └── site.yml
+```
 
 [root@ansible ansible]# 
 
