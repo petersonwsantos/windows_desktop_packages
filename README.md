@@ -1,33 +1,111 @@
 [![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
 
-Role ansible-role-windows-desktop-packages
-=========
+Role Windows Desktop Packages
+==============================
 
-A brief description of the role goes here.
+This ansible role is responsible for installing programs on the network's desktops, using the chocolatey package manager.
 
 Requirements
 ------------
-
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ansible configurado com winrm.  
+Test:
+[root@ansible ansible]# ansible windows -m win_ping
+    192.168.0.116 | SUCCESS => {
+        "changed": false,
+        "ping": "pong"
+    }
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The variables for this role should to set in defaults/main.yml, vars/main.yml or /etc/ansible/groupvars/.
+
+**windows_desktop_packages_version** : For instalation packages on specific version.
+Ex: 
+windows_desktop_packages_version:
+  - notepadplusplus:
+    name: notepadplusplus
+    state: present
+    version: 7.4.2
+    force: True
+  - googlechrome:
+    name: googlechrome
+    state: present
+    version: 60.0.3112.113
+    force: false
+
+**windows_desktop_packages_latest**: For instalation packages on latest version
+Ex:
+windows_desktop_packages_latest:
+  - chocolatey
+  - firefox
+  - jre8
+  - conemu
+  - 7zip.install
+  - openoffice
+  - cdburnerxp
+  - adobereader
+  - ccleaner
+  - dotnet4.0
+  - flashplayerplugin
+  - vlc
+  - pdfcreator
+  - wget
+
+Chocolatey
+https://chocolatey.org/packages
+
+For information Chocolatey
+<a href="https://feeds.feedburner.com/chocolatey" title="Subscribe to package updates" rel="alternate" type="application/rss+xml"><img src="https://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" style="border:0" />&nbsp;<span>Subscribe to updates</span></a>
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+Windows 7 ou upper
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+[root@ansible ansible]# vi site.yml
 
-    - hosts: servers
+    - name: apply common configuration to all nodes
+      hosts: windows
+
       roles:
-         - { role: username.rolename, x: 42 }
+        - windows-desktop-packages
+
+[root@ansible ansible]# ansible-galaxy install petersonwsantos.windows_desktop_packages
+
+[root@ansible ansible]# tree /etc/ansible
+    /etc/ansible
+    ├── enthal_rsa
+    ├── enthal_rsa.pub
+    ├── group_vars
+    │   ├── all.yml
+    │   └── windows.yml
+    ├── hosts
+    ├── roles
+    │   ├── petersonwsantos.windows_desktop_packages
+    │   │   ├── defaults
+    │   │   │   └── main.yml
+    │   │   ├── handlers
+    │   │   │   └── main.yml
+    │   │   ├── meta
+    │   │   │   └── main.yml
+    │   │   ├── README.md
+    │   │   ├── tasks
+    │   │   │   └── main.yml
+    │   │   ├── tests
+    │   │   │   ├── inventory
+    │   │   │   └── test.yml
+    │   │   ├── Vagrantfile
+    │   │   └── vars
+    │   │       └── main.yml
+    ├── site.retry
+    └── site.yml
+
+[root@ansible ansible]# 
 
 License
 -------
@@ -37,4 +115,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Peterson W santos
