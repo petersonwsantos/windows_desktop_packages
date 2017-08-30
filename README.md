@@ -3,7 +3,7 @@
 Role Windows Desktop Packages
 ==============================
 
-This ansible role is responsible for installing programs on the network's desktops, using the chocolatey package manager.
+This Ansible Role install programs on the network's desktops using the chocolatey package manager.
 
 Requirements
 ------------
