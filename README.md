@@ -76,11 +76,11 @@ Example Playbook
 
 **[root@ansible ansible]#** vi site.yml
 ```
-    - name: apply common configuration to all nodes
+    - name: apply common configuration to windows nodes
       hosts: windows
 
       roles:
-        - windows-desktop-packages
+        - windows_desktop_packages
 ```
 
 **[root@ansible ansible]#** ansible-galaxy install petersonwsantos.windows_desktop_packages
@@ -88,8 +88,6 @@ Example Playbook
 **[root@ansible ansible]#** tree /etc/ansible
 ```
     /etc/ansible
-        ├── enthal_rsa
-        ├── enthal_rsa.pub
         ├── group_vars
         │   ├── all.yml
         │   └── windows.yml
@@ -111,9 +109,10 @@ Example Playbook
         │   │   ├── Vagrantfile
         │   │   └── vars
         │   │       └── main.yml
-        ├── site.retry
         └── site.yml
 ```
+
+
 
 **[root@ansible ansible]#** ansible-playbook  site.yml 
 
