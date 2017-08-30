@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/petersonwsantos/ansible-role-windows-desktop-packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/ansible-role-windows-desktop-packages)
+[![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
 
 Role ansible-role-windows-desktop-packages
 =========
