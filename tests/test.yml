@@ -1,4 +1,4 @@
 ---
-- hosts: windows
-  roles:
+- hosts: localhost
+  remote_user: root
     - windows_desktop_packages
