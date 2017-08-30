@@ -74,7 +74,7 @@ Windows 7 or higher
 Example Playbook
 ----------------
 
-**[root@ansible ansible]#** vi site.yml
+**[root@ansible ]#** vi site.yml
 ```
     - name: apply common configuration to windows nodes
       hosts: windows
