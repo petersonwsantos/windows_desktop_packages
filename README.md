@@ -8,9 +8,11 @@ This ansible role is responsible for installing programs on the network's deskto
 Requirements
 ------------
 Ansible configurado com winrm.  
+
 Test:
-[root@ansible ansible]# ansible windows -m win_ping
-````
+
+**[root@ansible ansible]# ansible windows -m win_ping **
+```
 192.168.0.116 | SUCCESS => {
  "changed": false,
  "ping": "pong"
@@ -59,6 +61,8 @@ windows_desktop_packages_latest:
 ```
 
 Chocolatey
+--------------------
+
 https://chocolatey.org/packages
 
 <a href="https://feeds.feedburner.com/chocolatey" title="Subscribe to package updates" rel="alternate" type="application/rss+xml"><img src="https://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" style="border:0" />&nbsp;<span> Subscribe Chocolatey to packages version updates</span></a>
@@ -72,7 +76,7 @@ Windows 7 ou upper
 Example Playbook
 ----------------
 
-[root@ansible ansible]# vi site.yml
+**[root@ansible ansible]#** vi site.yml
 ```
     - name: apply common configuration to all nodes
       hosts: windows
@@ -80,9 +84,10 @@ Example Playbook
       roles:
         - windows-desktop-packages
 ```
-[root@ansible ansible]# ansible-galaxy install petersonwsantos.windows_desktop_packages
 
-[root@ansible ansible]# tree /etc/ansible
+**[root@ansible ansible]#** ansible-galaxy install petersonwsantos.windows_desktop_packages
+
+**[root@ansible ansible]#** tree /etc/ansible
 ```
     /etc/ansible
         ├── enthal_rsa
@@ -112,7 +117,7 @@ Example Playbook
         └── site.yml
 ```
 
-[root@ansible ansible]# 
+**[root@ansible ansible]#** ansible-playbook  site.yml 
 
 License
 -------
