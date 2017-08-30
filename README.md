@@ -9,7 +9,7 @@ Requirements
 ------------
 Test your Ansible configuration with winrm.  
 
-**[root@ansible ansible]#** ansible windows -m win_ping
+**[root@ansible ]#** ansible windows -m win_ping
 ```
 192.168.0.116 | SUCCESS => {
  "changed": false,
@@ -83,9 +83,9 @@ Example Playbook
         - windows_desktop_packages
 ```
 
-**[root@ansible ansible]#** ansible-galaxy install petersonwsantos.windows_desktop_packages
+**[root@ansible ]#** ansible-galaxy install petersonwsantos.windows_desktop_packages
 
-**[root@ansible ansible]#** tree /etc/ansible
+**[root@ansible ]#** tree /etc/ansible
 ```
     /etc/ansible
         ├── group_vars
@@ -114,7 +114,7 @@ Example Playbook
 
 
 
-**[root@ansible ansible]#** ansible-playbook  site.yml 
+**[root@ansible ]#** ansible-playbook  site.yml 
 
 License
 -------
