@@ -10,7 +10,7 @@ This Ansible Role install programs on the network's desktops using the chocolate
 
 - **Project - Ansible Roles:** https://www.pivotaltracker.com/n/projects/2102371
 
-- **Story for this module:** https://www.pivotaltracker.com/story/show/150707627
+- **Story:** https://www.pivotaltracker.com/story/show/150707627
 
 
 Requirements
