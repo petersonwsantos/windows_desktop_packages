@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
 
+**Project - Ansible Roles:** https://www.pivotaltracker.com/n/projects/2102371
+**Story for this module:** https://www.pivotaltracker.com/story/show/150707627
+
 Role Windows Desktop Packages
 ==============================
 
