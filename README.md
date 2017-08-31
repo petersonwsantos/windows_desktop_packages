@@ -1,17 +1,17 @@
 [![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
 
-![Pivotal Tracker](https://www.pivotaltracker.com/images/v7/logos/logo_main.png)
-
------------------
-
-- **Project - Ansible Roles:** https://www.pivotaltracker.com/n/projects/2102371
-
-- **Story for this module:** https://www.pivotaltracker.com/story/show/150707627
 
 Role Windows Desktop Packages
 ==============================
 
 This Ansible Role install programs on the network's desktops using the chocolatey package manager.
+
+<img src="https://www.pivotaltracker.com/images/v7/logos/logo_main.png" width="120">
+
+- **Project - Ansible Roles:** https://www.pivotaltracker.com/n/projects/2102371
+
+- **Story for this module:** https://www.pivotaltracker.com/story/show/150707627
+
 
 Requirements
 ------------
