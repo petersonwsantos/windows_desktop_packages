@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?style=flat-square)](https://github.com/petersonwsantos/windows_desktop_packages/releases)
+
+[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg?style=flat-square)](https://github.com/petersonwsantos/windows_desktop_packages)
 
 Role Windows Desktop Packages
 ==============================
