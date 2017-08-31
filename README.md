@@ -123,7 +123,7 @@ Example Playbook
 ```
 
 
-
+ 
 **[root@ansible ]#** ansible-playbook  site.yml 
 
 License
