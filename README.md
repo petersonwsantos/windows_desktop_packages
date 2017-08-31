@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
-
 [![GitHub issues](https://img.shields.io/github/issues/petersonwsantos/windows_desktop_packages.svg)](https://github.com/petersonwsantos/windows_desktop_packages/issues)
 
 Role Windows Desktop Packages
