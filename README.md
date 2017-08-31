@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/petersonwsantos/windows_desktop_packages.svg?branch=master)](https://travis-ci.org/petersonwsantos/windows_desktop_packages)
 
-![Pivotal Tracker](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_1489708427/pivotal-tracker.png)
+![Pivotal Tracker](https://www.pivotaltracker.com/images/v7/logos/logo_main.png)
 
 -----------------
 
